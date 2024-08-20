@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="stuff"></div>
+    <script>
+        showStuff();
+        function showStuff() {
+            document.getElementById("stuff").innerHTML = /*HTML*/`
+                username:
+                <input id="userName" type="text">
+                password:
+                <input id="passWord" type="password">
+                <button onclick="forandrePåTekst()">login</button>
+                <div id="detteForandres">tekst</div>
+            `;
+        }
+        function forandrePåTekst() {
+            let text = document.getElementById("userName").value;
+            let password = document.getElementById("passWord").value;
+            document.getElementById("detteForandres").innerHTML = 'woohoo';
+        }
+    </script>
+
+</body>
+
+</html>
